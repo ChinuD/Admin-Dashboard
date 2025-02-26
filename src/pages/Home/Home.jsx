@@ -2,19 +2,19 @@
 import FeatureInfo from "../../Components/FeatureInfo/FeatureInfo";
 import "./Home.css";
 import Chart from "../../Components/Chart/Chart";
-// import { userData } from "../../dummyData";
-// import WidgetSm from "../../components/widgetSm/WidgetSm";
-// import WidgetLg from "../../components/widgetLg/WidgetLg";
+import {data} from '../../dummyData'
+import WidgetSm from "../../Components/widgetsm/widgetsm";
+import WidgetLg from "../../Components/WidgetLg/WidgetLg";
 
 export default function Home() {
   return (
     <div className="home">
       <FeatureInfo />
-      {/* <Chart title="User Analytics" grid dataKey="Active User"/> */}
+      <Chart data={data} title="User Analytics" grid dataKey="Active User"/>
       <Chart/>
       <div className="homeWidgets">
-        {/* <WidgetSm/> */}
-        {/* <WidgetLg/> */}
+        <WidgetSm/>
+        <WidgetLg/>
       </div>
     </div>
   );
