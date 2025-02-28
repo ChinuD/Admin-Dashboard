@@ -6,6 +6,8 @@ import Home from './pages/Home/Home'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import UserList from './pages/UserList/UserList'
 import Chart from './Components/Chart/Chart'
+import User from './User/User'
+import NewUser from './NewUser/NewUser'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +20,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/userlist' element={<UserList/>}/>
+          <Route path='/userlist/:userid' element={<User/>}/>
+          <Route path='/newUser' element={<NewUser/>}/>
         </Routes>
       </div>
     </Router>
