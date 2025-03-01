@@ -8,6 +8,8 @@ import UserList from './pages/UserList/UserList'
 import Chart from './Components/Chart/Chart'
 import User from './User/User'
 import NewUser from './NewUser/NewUser'
+import ProductList from './pages/ProductList/ProductList'
+import Product from './pages/Product/Product'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +24,9 @@ function App() {
           <Route path='/userlist' element={<UserList/>}/>
           <Route path='/userlist/:userid' element={<User/>}/>
           <Route path='/newUser' element={<NewUser/>}/>
+          <Route path='/products' element={<ProductList/>}/>
+          <Route path='/products/:productId' element={<Product/>}/>
+          <Route path='/newUser' element={<newProduct/>}/>
         </Routes>
       </div>
     </Router>
